@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+div.list_item{
+ background-color: aliceblue;
+ border: dashed thin black;
+ margin: 10px;
+ padding: 10px;
+}
+
+div.jmap_item{
+ background-color: aliceblue;
+ border: dashed thin black;
+ margin: 10px;
+ padding: 10px;
+}
+
+div.container{
+ display: grid;
+ grid-template-columns: 1fr 2fr;
+ height: 70vh;
+}
+#list_table{
+ height: 30em;
+}
+#list_table_content{
+ height: 100%;
+ overflow-y: scroll;
+}
+
+
+th, td{
+ border: solid 1px black;
+ padding: 2px;
+ text-align: center;
+}

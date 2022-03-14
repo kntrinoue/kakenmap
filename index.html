@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+ <meta charaset="UTF-8">
+ <title>KAKEN研究者マップ</title>
+ <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+ <script type="text/javascript" src="./js/jmap.js"></script>
+ <link rel="stylesheet" href="./css/style_main.css">
+ <!--https://yugokimura.github.io/jmap/ -->
+ <script type = "text/javascript">
+     $(document).ready(function() {
+         $('#jmap').jmap();
+     });
+ </script>
+
+</head>
+<body>
+ <h1> KAKENに収録された研究者マップ </h1>
+ <p>このアプリケーションは<a href="https://nrid.nii.ac.jp/ja/index/" target="_blank"> KAKEN </a>で検索できる
+ (研究費を取得した)研究者がどの地域に多いかを示すものです。例えば、ある分野(生物学など)のフィルタで出てきた
+ 研究者がどの地域に多いかを調べることができます。(大学の代表住所のみを利用しているため、研究所や企業等は含みません)
+ </p>
+ <div class="container" id="app">
+  <div class="list_item">
+   <p> <a href="https://nrid.nii.ac.jp/ja/index/" target="_blank"> KAKEN </a>からダウンロードしたcsvファイルを入力してください。</p>
+   <input type="file" name="select" id="demo_btn">
+   <script type="text/javascript" src="./js/univplace.js"></script>
+   <script type="text/javascript" src="./js/fileRead.js"></script>
+   <div id="list_table"></div>
+  </div>
+  
+  <div class="jmap_item" id="jmap"></div>
+ </div>
+ <hr>
+ <h2> チュートリアル </h2>
+ <ol>
+  <li> 
+    <a href="https://nrid.nii.ac.jp/ja/index/" target="_blank"> KAKEN </a>から条件を入れて研究者を探す<br>
+    <p> 例:キーワードで検索</p>
+    <img src="./img/search1.png">
+    <p> 例:詳細検索で審査区分等を限定して検索</p>
+    <img src="./img/search2.png"> 
+  </li>
+  <li> csvファイルをダウンロードする. 実行ボタンを押すとダウンロードできる.<br>
+     <img src="./img/search3.png"> 
+  </li>
+  <li> csvファイルを<a href="#app">上記で</a>アップロードする
+  </li>
+ </ol>
+ 
+ <p> 
+   研究室を選ぶときや、共同研究者を探すときに参考になれば幸いです.
+   <!-- 研究費配分の偏りを調べるときにも使えると思います.-->
+ </p>
+
+</body>
+</html>
